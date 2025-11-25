@@ -1,14 +1,18 @@
 'use client';
 
+import { useState } from 'react';
 import { Photographer } from '@/types';
-import { Star, MapPin } from 'lucide-react';
+import { Star, MapPin, MessageCircle } from 'lucide-react';
 import Link from 'next/link';
+import InquiryModal from './InquiryModal';
 
 interface PhotographerCardProps {
   photographer: Photographer;
 }
 
 export default function PhotographerCard({ photographer }: PhotographerCardProps) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <div className="bg-gradient-to-br from-gray-900 to-black rounded-xl shadow-2xl overflow-hidden hover:shadow-yellow-500/20 hover:-translate-y-1 transition-all duration-300 border border-yellow-500">
       <div className="h-48 bg-gray-200 overflow-hidden">
@@ -48,13 +52,28 @@ export default function PhotographerCard({ photographer }: PhotographerCardProps
           ))}
         </div>
         
-        <Link 
-          href={`/photographer/${photographer.id}`}
-          className="w-full bg-gradient-to-r from-yellow-500 to-yellow-600 text-black py-3 px-4 rounded-lg hover:from-yellow-400 hover:to-yellow-500 transition-all duration-300 text-center block font-bold shadow-lg hover:shadow-yellow-500/30"
-        >
-          View Profile 👑
-        </Link>
+        <div className="flex gap-2">
+          <Link 
+            href={`/photographer/${photographer.id}`}
+            className="flex-1 bg-gradient-to-r from-yellow-500 to-yellow-600 text-black py-2 px-3 rounded-lg hover:from-yellow-400 hover:to-yellow-500 transition-all duration-300 text-center block font-bold text-sm shadow-lg"
+          >
+            View Profile
+          </Link>
+          <button
+            onClick={() => setIsModalOpen(true)}
+            className="flex-1 bg-gradient-to-r from-blue-500 to-purple-600 text-white py-2 px-3 rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 font-bold text-sm shadow-lg flex items-center justify-center gap-1"
+          >
+            <MessageCircle className="w-4 h-4" />
+            Inquire
+          </button>
+        </div>
       </div>
+      
+      <InquiryModal 
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        photographerName={photographer.name}
+      />
     </div>
   );
 }

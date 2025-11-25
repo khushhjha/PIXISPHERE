@@ -36,7 +36,7 @@ export default function PhotographerProfile() {
   if (loading) {
     return (
       <div className="flex justify-center items-center min-h-screen">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-yellow-400"></div>
       </div>
     );
   }
@@ -71,7 +71,7 @@ export default function PhotographerProfile() {
       {/* Back Button */}
       <Link 
         href="/" 
-        className="inline-flex items-center text-blue-600 hover:text-blue-800 mb-6"
+        className="inline-flex items-center text-yellow-400 hover:text-yellow-300 mb-6"
       >
         <ArrowLeft className="w-4 h-4 mr-2" />
         Back to Photographers
@@ -133,30 +133,30 @@ export default function PhotographerProfile() {
 
         {/* Right Column - Details */}
         <div>
-          <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-100">
-            <h1 className="text-3xl font-bold text-gray-900 mb-4">{photographer.name}</h1>
+          <div className="bg-gradient-to-br from-gray-900 to-black rounded-xl shadow-lg p-8 border border-yellow-500">
+            <h1 className="text-3xl font-bold text-yellow-400 mb-4">{photographer.name}</h1>
             
-            <div className="flex items-center text-gray-600 mb-4">
+            <div className="flex items-center text-yellow-300 mb-4">
               <MapPin className="w-5 h-5 mr-2" />
               <span>{photographer.location}</span>
             </div>
 
             <div className="flex items-center mb-4">
               <Star className="w-5 h-5 text-yellow-400 fill-current mr-2" />
-              <span className="font-medium text-lg">{photographer.rating}</span>
-              <span className="text-gray-600 ml-2">({photographer.reviews.length} reviews)</span>
+              <span className="font-medium text-lg text-yellow-300">{photographer.rating}</span>
+              <span className="text-yellow-200 ml-2">({photographer.reviews.length} reviews)</span>
             </div>
 
             <div className="mb-6">
-              <span className="text-3xl font-bold text-gray-900">₹{photographer.price.toLocaleString()}</span>
-              <span className="text-gray-600 ml-2">starting price</span>
+              <span className="text-3xl font-bold text-yellow-400">₹{photographer.price.toLocaleString()}</span>
+              <span className="text-yellow-300 ml-2">starting price</span>
             </div>
 
             <div className="mb-6">
-              <h3 className="font-semibold text-gray-900 mb-2">Styles</h3>
+              <h3 className="font-semibold text-yellow-400 mb-2">Styles</h3>
               <div className="flex flex-wrap gap-2">
                 {photographer.styles.map((style) => (
-                  <span key={style} className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">
+                  <span key={style} className="px-3 py-1 bg-yellow-500 text-black rounded-full text-sm font-medium">
                     {style}
                   </span>
                 ))}
@@ -164,10 +164,10 @@ export default function PhotographerProfile() {
             </div>
 
             <div className="mb-6">
-              <h3 className="font-semibold text-gray-900 mb-2">Specialties</h3>
+              <h3 className="font-semibold text-yellow-400 mb-2">Specialties</h3>
               <div className="flex flex-wrap gap-2">
                 {photographer.tags.map((tag) => (
-                  <span key={tag} className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">
+                  <span key={tag} className="px-3 py-1 bg-blue-500 text-white rounded-full text-sm font-medium">
                     {tag}
                   </span>
                 ))}
@@ -175,13 +175,13 @@ export default function PhotographerProfile() {
             </div>
 
             <div className="mb-6">
-              <h3 className="font-semibold text-gray-900 mb-2">About</h3>
-              <p className="text-gray-700">{photographer.bio}</p>
+              <h3 className="font-semibold text-yellow-400 mb-2">About</h3>
+              <p className="text-yellow-200">{photographer.bio}</p>
             </div>
 
             <button
               onClick={() => setShowInquiry(true)}
-              className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 px-6 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl"
+              className="w-full bg-gradient-to-r from-yellow-500 to-yellow-600 text-black py-4 px-6 rounded-lg hover:from-yellow-400 hover:to-yellow-500 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl"
             >
               📞 Send Inquiry
             </button>
@@ -191,13 +191,13 @@ export default function PhotographerProfile() {
 
       {/* Reviews Section */}
       <div className="mt-12">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Reviews</h2>
+        <h2 className="text-2xl font-bold text-yellow-400 mb-6">Reviews</h2>
         <div className="space-y-6">
           {photographer.reviews.map((review, index) => (
-            <div key={index} className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
+            <div key={index} className="bg-gradient-to-br from-gray-900 to-black rounded-xl shadow-lg p-6 border border-yellow-500">
               <div className="flex items-center justify-between mb-4">
                 <div>
-                  <h4 className="font-semibold text-gray-900">{review.name}</h4>
+                  <h4 className="font-semibold text-yellow-400">{review.name}</h4>
                   <div className="flex items-center mt-1">
                     {[...Array(5)].map((_, i) => (
                       <Star
@@ -209,9 +209,9 @@ export default function PhotographerProfile() {
                     ))}
                   </div>
                 </div>
-                <span className="text-gray-500 text-sm">{review.date}</span>
+                <span className="text-yellow-300 text-sm">{review.date}</span>
               </div>
-              <p className="text-gray-700">{review.comment}</p>
+              <p className="text-yellow-200">{review.comment}</p>
             </div>
           ))}
         </div>

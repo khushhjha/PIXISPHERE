@@ -9,8 +9,8 @@
       "styles": ["Outdoor", "Studio"],
       "tags": ["Candid", "Maternity"],
       "bio": "Award-winning studio specializing in maternity and newborn shoots.",
-      "profilePic": "/images/ravi.jpg",
-      "portfolio": ["/images/portfolio1.jpg", "/images/portfolio2.jpg"],
+      "profilePic": "https://picsum.photos/300/300?random=1",
+      "portfolio": ["https://picsum.photos/600/400?random=11", "https://picsum.photos/600/400?random=12"],
       "reviews": [
         {
           "name": "Ananya",
@@ -29,8 +29,8 @@
       "styles": ["Candid", "Indoor"],
       "tags": ["Newborn", "Birthday"],
       "bio": "Delhi-based candid specialist for kids and birthday parties.",
-      "profilePic": "/images/lensqueen.jpg",
-      "portfolio": ["/images/lens1.jpg", "/images/lens2.jpg"],
+      "profilePic": "https://picsum.photos/300/300?random=2",
+      "portfolio": ["https://picsum.photos/600/400?random=21", "https://picsum.photos/600/400?random=22"],
       "reviews": [
         {
           "name": "Priya",
@@ -49,8 +49,8 @@
       "styles": ["Studio", "Outdoor", "Traditional"],
       "tags": ["Wedding", "Pre-wedding"],
       "bio": "Capturing timeless wedding stories across India.",
-      "profilePic": "/images/clickfactory.jpg",
-      "portfolio": ["/images/wed1.jpg", "/images/wed2.jpg"],
+      "profilePic": "https://picsum.photos/300/300?random=3",
+      "portfolio": ["https://picsum.photos/600/400?random=31", "https://picsum.photos/600/400?random=32"],
       "reviews": [
         {
           "name": "Rahul",
@@ -69,8 +69,8 @@
       "styles": ["Outdoor", "Candid"],
       "tags": ["Maternity", "Couple"],
       "bio": "Natural light specialist focusing on emotional storytelling.",
-      "profilePic": "/images/neha.jpg",
-      "portfolio": ["/images/neha1.jpg", "/images/neha2.jpg"],
+      "profilePic": "https://picsum.photos/300/300?random=4",
+      "portfolio": ["https://picsum.photos/600/400?random=41", "https://picsum.photos/600/400?random=42"],
       "reviews": [
         {
           "name": "Sneha",
@@ -89,8 +89,8 @@
       "styles": ["Studio"],
       "tags": ["Birthday", "Family"],
       "bio": "Affordable indoor shoots with creative themes.",
-      "profilePic": "/images/snapshot.jpg",
-      "portfolio": ["/images/snapshot1.jpg", "/images/snapshot2.jpg"],
+      "profilePic": "https://picsum.photos/300/300?random=5",
+      "portfolio": ["https://picsum.photos/600/400?random=51", "https://picsum.photos/600/400?random=52"],
       "reviews": [
         {
           "name": "Vikram",
@@ -109,8 +109,8 @@
       "styles": ["Outdoor", "Traditional"],
       "tags": ["Wedding", "Engagement"],
       "bio": "Traditional and contemporary wedding photography specialists.",
-      "profilePic": "/images/creative.jpg",
-      "portfolio": ["/images/creative1.jpg", "/images/creative2.jpg"],
+      "profilePic": "https://picsum.photos/300/300?random=6",
+      "portfolio": ["https://picsum.photos/600/400?random=61", "https://picsum.photos/600/400?random=62"],
       "reviews": [
         {
           "name": "Arjun",
@@ -129,8 +129,8 @@
       "styles": ["Studio", "Candid"],
       "tags": ["Portrait", "Family"],
       "bio": "Expert portrait photographers with 10+ years experience.",
-      "profilePic": "/images/portrait.jpg",
-      "portfolio": ["/images/portrait1.jpg", "/images/portrait2.jpg"],
+      "profilePic": "https://picsum.photos/300/300?random=7",
+      "portfolio": ["https://picsum.photos/600/400?random=71", "https://picsum.photos/600/400?random=72"],
       "reviews": [
         {
           "name": "Meera",
@@ -149,8 +149,8 @@
       "styles": ["Outdoor", "Candid"],
       "tags": ["Maternity", "Newborn"],
       "bio": "Specializing in natural light photography for expecting families.",
-      "profilePic": "/images/golden.jpg",
-      "portfolio": ["/images/golden1.jpg", "/images/golden2.jpg"],
+      "profilePic": "https://picsum.photos/300/300?random=8",
+      "portfolio": ["https://picsum.photos/600/400?random=81", "https://picsum.photos/600/400?random=82"],
       "reviews": [
         {
           "name": "Kavya",

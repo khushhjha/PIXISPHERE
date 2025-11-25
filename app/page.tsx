@@ -16,15 +16,19 @@ export default function HomePage() {
   } = usePhotographerStore();
   
   const [displayCount, setDisplayCount] = useState(6);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const loadPhotographers = async () => {
       setLoading(true);
+      setError(null);
       try {
         const data = await fetchPhotographers();
+        console.log('Setting photographers:', data);
         setPhotographers(data);
       } catch (error) {
         console.error('Failed to fetch photographers:', error);
+        setError(error instanceof Error ? error.message : 'Failed to load photographers');
       } finally {
         setLoading(false);
       }
@@ -72,7 +76,13 @@ export default function HomePage() {
         <div className="lg:w-3/4">
           {loading ? (
             <div className="flex justify-center items-center h-64">
-              <Loader2 className="w-8 h-8 animate-spin text-blue-600" />
+              <Loader2 className="w-8 h-8 animate-spin text-yellow-400" />
+            </div>
+          ) : error ? (
+            <div className="text-center py-12">
+              <p className="text-red-400 text-lg mb-2">Error loading photographers</p>
+              <p className="text-yellow-300 text-sm">{error}</p>
+              <p className="text-yellow-400 text-sm mt-4">Make sure the API server is running on http://localhost:3001</p>
             </div>
           ) : (
             <>

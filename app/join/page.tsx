@@ -4,8 +4,20 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { User, Mail, Phone, MapPin, Camera, Lock, Eye, EyeOff } from 'lucide-react';
 
+interface JoinFormData {
+  name: string;
+  email: string;
+  phone: string;
+  location: string;
+  experience: string;
+  specialties: string[];
+  portfolio: string;
+  password: string;
+  confirmPassword: string;
+}
+
 export default function JoinPage() {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<JoinFormData>({
     name: '',
     email: '',
     phone: '',
